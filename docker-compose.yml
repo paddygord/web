@@ -11,8 +11,10 @@ services:
       - PGID=1000
       - TZ=Europe/London
       - URL=avagordon.name
-      - SUBDOMAINS=www,
+      - SUBDOMAINS=
       - VALIDATION=http
+      - CERTPROVIDER=zerossl
+      - EMAIL=avagordon01@gmail.com
     volumes:
       - ./swag:/config
     ports:
