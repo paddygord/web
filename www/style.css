@@ -1,0 +1,155 @@
+/* reset */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+/* vars */
+:root {
+    --header-color: #60d7ff;
+    --text-color: #0645ad;
+    --bg-off-white: #f0f0f0;
+    --table-border: #aaaaaa;
+    --off-text-color: #777777;
+}
+
+/* text */
+body {
+    font-size: 14px;
+    font-family: monospace;
+    line-height: 1.3;
+}
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+a:hover {
+    text-decoration: underline;
+}
+header h1 a {
+    color: var(--header-color);
+}
+nav h2 {
+    font-size: 16px;
+}
+
+/* layout */
+header, section, nav {
+    justify-items: stretch;
+    align-self: stretch;
+}
+body {
+    display: grid;
+    grid-template-areas:
+    "header nav"
+    "section nav";
+    grid-template-columns: 854px 400px;
+    grid-template-rows: auto 1fr;
+    grid-gap: 1.3em;
+    width: calc(854px + 400px + 1.3em);
+    margin: 1.3em auto;
+}
+header {
+    grid-area: header;
+}
+section {
+    grid-area: section;
+}
+nav {
+    grid-area: nav;
+}
+nav > div {
+    margin-bottom: 1.3em;
+}
+
+/* forms/inputs */
+form {
+    overflow-y: hidden;
+}
+input[type="search"], input[type="submit"], input[type="text"], textarea {
+    box-shadow: none;
+    font-family: inherit;
+    font-size: 100%;
+    width: 100%;
+    padding: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    box-sizing: border-box;
+    background: var(--off-white);
+    border: none;
+}
+textarea {
+    resize: vertical;
+}
+input[type="submit"] {
+    width: 80px;
+    cursor: pointer;
+}
+.flex {
+    align-items: center;
+    display: flex;
+}
+.flex-gap {
+    flex: 1;
+}
+#comment {
+    display: none;
+}
+
+/* posts/comments */
+.post-content, .comment-content {
+    font-family: sans-serif;
+}
+.post-content p, .comment-content p {
+    margin: 0px;
+}
+.post-content *, .comment-content * {
+    max-width: 100%;
+}
+pre {
+    white-space: pre-wrap;
+    margin: 4px 0px;
+    font-family: monospace;
+    background: var(--bg-off-white);
+}
+table {
+    margin: 4px 0px;
+}
+table, th, td {
+    padding: 4px;
+    border-collapse: collapse;
+    border: 1px solid var(--table-border);
+}
+.posts {
+    color: var(--off-text-color);
+}
+li {
+    list-style-type: decimal-leading-zero;
+}
+.post-link {
+    height: 4ex;
+    line-height: 2ex;
+    overflow: hidden;
+    margin-bottom: 1ex;
+}
+.comment > .comments {
+    margin-left: 1.5em;
+}
+.info {
+    color: var(--off-text-color);
+    font-size: 12px;
+}
+.info a {
+    color: inherit;
+}
+.grey {
+    color: var(--off-text-color);
+}
+hr {
+    border: 0;
+    margin-top: 1.3em;
+}
+hr:after {
+    content: "// ----------------";
+    color: var(--off-text-color);
+}
