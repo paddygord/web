@@ -1,0 +1,37 @@
+interactive python script for setting up DNS/IP/firewall configuration
+    howto buy domain name and configure
+    ask for domain name used and ddns password
+    input that to swag and ddclient config
+    instructions for router/firewall setup
+    and test for connectivity/correctness at each step
+
+ip address connectivity
+dont want to pay for static ip, use ddclient
+first make sure it works on just ipv6
+ipv6 only supported on docker on linux
+ipv6 doesn't seem to work on smarty data connection
+ipv6 partially works on wifi on firefox android, firefox avoids using ipv6 for some reason
+
+then make sure it works on just ipv4
+
+social features
+
+discovery of other websites
+broadcasting website via cookies when visiting other sites?
+    TODO is this technically possible?
+    - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
+    - https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation
+    - https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
+via IP logging and checking for accessible website?
+via crawling links and search?
+
+subscription to other websites
+via rss?
+via activitypub?
+
+maybe noembed?
+
+templating, writing, generating feeds, posts list, ...
+php?
+static site generator?
+https://jamstack.org/generators/
